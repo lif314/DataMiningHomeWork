@@ -68,6 +68,7 @@ data_dict = {"jd2g-1": "../data/jiading/2g/jiading-2g-1.csv",
              "sp4g": "../data/siping/4g/siping_4g.csv"}
 
 
+# 经纬度数据归一化处理
 def preprocess(drname):
     path = data_dict[drname]
     data = pd.read_csv(path)
@@ -89,7 +90,7 @@ def preprocess(drname):
 Max_S = 10
 BATCH_S = 4
 
-
+# 这个mode是什么？其它数据里面没有
 def mode_dict(drname):
     path = data_dict[drname]
     data = pd.read_csv(path)
@@ -261,6 +262,7 @@ def seq_sli(drname):
     return train_dataset, train_label, train_time, train_mode, test_dataset, test_label, test_time, test_mode
 
 
+# 准备数据
 def data_prepare(fea, lab, tl, md, batch_size=BATCH_S):
     f, l, t, d = [], [], [], []
     _ = fea.shape[0] % batch_size

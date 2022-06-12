@@ -16,7 +16,10 @@ import util, model, metric, seq
 
 # from imp import reload
 
+
+# 指定训练数据集
 drname = "jd2g-2"
+# drname = "sp4g"
 
 
 def load_train_test_dtst(drname):
@@ -62,10 +65,11 @@ lox_sel = 0
 if lox_sel == 0:
     raw_model = seq.Seq()
 else:
-
     raw_model = model.Seq()
 
+# 优化器
 optimizer = tf.keras.optimizers.Adam(learning_rate=5e-4)
+# 损失函数
 loss_metric = tf.keras.metrics.Mean()
 
 m_med_err = 999
