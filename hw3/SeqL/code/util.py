@@ -62,7 +62,7 @@ feature_col4 = ['RNCID_1', 'RNCID_2', 'RNCID_3', 'RNCID_4', 'RNCID_5', 'RNCID_6'
                 'Time_1', 'Time_2', 'Time_3', 'Time_4', 'Time_5', 'Time_6', 'Time_7']
 
 data_dict = {"jd2g-1": "../data/jiading/2g/jiading-2g-1.csv",
-             "jd2g-2": "../data/jiading/2g/jiading-2g-2.csv",
+             "jd2g-2": "../data/jiading/2g/siping-4g-2.csv",
              "jd4g": "../data/jiading/4g/jiading-4g.csv",
              "sp2g": "../data/siping/2g/siping-2g.csv",
              "sp4g": "../data/siping/4g/siping_4g.csv"}

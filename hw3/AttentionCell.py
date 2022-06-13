@@ -29,10 +29,10 @@ class ALSTM_Cell(Layer):
                  batch_normalization=False,
                  **kwargs):
         super().__init__(**kwargs)
-        self.units = units
-        self.activation = activations.get(activation)
-        self.recurrent_activation = activations.get(recurrent_activation)
-        self.use_bias = use_bias
+        self.units = units   # 输出维度
+        self.activation = activations.get(activation)  # 注意tanh
+        self.recurrent_activation = activations.get(recurrent_activation)  # 注意sigmoid
+        self.use_bias = use_bias  # 使用偏置
 
         self.kernel_initializer = initializers.get(kernel_initializer)
         self.recurrent_initializer = initializers.get(recurrent_initializer)
